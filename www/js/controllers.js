@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['starter.services'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
@@ -41,16 +41,10 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+.controller('CategoriesCtrl', function($scope, Category) {
+  $scope.categories = Category.query();
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('CategoryCtrl', function($scope, $stateParams, Category) {
+  $scope.category = Category.get({categoryId: $stateParams.categoryId})
 });
