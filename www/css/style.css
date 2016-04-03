@@ -1,1 +1,59 @@
-/* Empty. Add your own CSS if you like */
+/*General styles*/
+body {
+  background-color: #eeeded;
+}
+
+hr {
+  border: none;
+}
+
+button {
+  border-radius: 0;
+}
+
+/*Login view styles*/
+
+.login-body {
+  background-color: #eeeded;
+}
+
+.login-body p {
+  text-align: center;
+}
+
+.login-body button {
+  width: 90%;
+  border-radius: 0;
+  margin-left: 5%;
+}
+
+.login-body .button-register {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.login-body .login-list {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.login-list p {
+  text-align: center;
+}
+
+.login-list .item-input {
+  margin-bottom: 1em;
+}
+
+.login-list .item-button {
+  padding: 0;
+}
+
+.login-list .item-button button {
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+
